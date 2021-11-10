@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/statics/index.css">
+    <title>免杀平台v0.1.2</title>
+</head>
+<body>
+    <h2>免杀平台v0.1.2</h2>
+    <form action="/" method="post" novalidate autocomplete="off">
+        免杀方式:
+        <select name="bypass">
+            <option value="AES1">AES加密shellcode1(.exe)</option>
+            <option value="AES2">AES加密shellcode2(.exe)</option>
+            <option value="HouQing">分离免杀HouQing(golang)(.zip)</option>
+            <option value="AES_GO_separate">分离免杀(.zip)</option>
+        </select>
+        <br><br>
+        shellcode 生成方式:
+        <br><br>
+        <input type="radio" value="cs" name="choose_shellcode" checked >
+        1. Cobalt Strike shellcode
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payolad:
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="output">
+            <option value="C">C</option>
+            <option value="C#">C#</option>
+            <option value="Java">Java</option>
+            <option value="Perl">Perl</option>
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby</option>
+        </select>
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cobalt Strike Listener:
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP:
+        <input type="text" name="ip" placeholder="xxx.xxx.xxx.xxx">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PORT:
+        <input type="text" name="port" placeholder="1-65535">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回连类型:
+        <input type="radio" value="http" name="type" checked>Beacon_HTTP
+        <input type="radio" value="https" name="type">Beacon_HTTPS
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x64:
+        <input type="radio" value="1" name="x64" checked>Use x64 payload
+        <input type="radio" value="0" name="x64">Use x32 payload
+        <br><br>
+        <input type="radio" value="custom" name="choose_shellcode" >
+        2. 自定义shellcode:
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="shellcode" id="" cols="45" rows="10" placeholder="此处可自定义shellcode,格式为:0xfc,0x12,0x34,0x56"></textarea>
+        <br><br>
+        <input type="submit" name="生成免杀" value="生成免杀">
+        <input type="reset" name="重置">
+        <br><br>
+        问题反馈QQ:1310796748
+    </form>
+</body>
+</html>
