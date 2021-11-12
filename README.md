@@ -6,7 +6,7 @@ golang gin 框架写的免杀平台
  -  **go env -w GO111MODULE=on** 
  -  **go env -w GOPROXY=https://goproxy.io,direct** 
 3. 完毕后执行 **go install mvdan.cc/garble@latest** ；
-4. 下载本项目到D盘根目录，注意文件夹名字改为cool；
+4. 下载本项目到D盘根目录，文件夹名字改为cool；
 5. 运行cool.exe；
 6. 访问 **http://127.0.0.1:9000** 。
 
