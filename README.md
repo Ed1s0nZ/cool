@@ -20,7 +20,6 @@
 ### 2. 加密2
 - 直接执行exe。
 ### 3. 分离1(houqing) 
-(目前这个测试已经不过火绒了，查杀点为"异或"，下个版本更新绕过异或查杀。)
 - 用python起一个HTTP服务(python -m http.server 8080)，
 - 把图片放到起http服务的目录下，
 - 执行exe 参数为http服务的图片路径（xxx.exe http://127.0.0.1:8080/a.jpg) 。
