@@ -3,7 +3,7 @@
 - Golang Gin 框架写的免杀平台- (2021.11.12)
 - Golang Gin 框架写的免杀平台，更新捆绑免杀- (2021.11.20)
 - 增加自定义捆绑，修复一个小bug- (2021.11.22)
-- 上传"compile.exe_备份"，在\service\executable\下，如果出现0kb的话就把原来的compile.exe删掉，把"compile.exe_备份"改成compile.exe，这样的话混淆效果会变差。。。但是至少能用了-（2021.11.25）
+- 上传"compile.exe_备份"，在\service\executable\下，如果生成免杀是0kb的话就把原来的compile.exe删掉，把"compile.exe_备份"改成compile.exe，这样的话混淆效果会变差。。。但是至少能用了-（2021.11.25）
 ## 安装
 1. 安装Go环境，版本要**1.17**及以上；
 2. 如果是首次安装Go环境，安装完毕后要配置代理，执行以下这两条命令:
