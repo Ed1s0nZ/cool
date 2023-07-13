@@ -44,7 +44,3 @@
 目前火绒、360、卡巴斯基、def全过；先这样用，不能bypass了再说，更新频率看star数量🐕。
 
 ## 声明：仅用于技术交流，请勿用于非法用途。
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Ed1s0nZ/cool&type=Timeline)](https://star-history.com/#Ed1s0nZ/cool&Timeline)
